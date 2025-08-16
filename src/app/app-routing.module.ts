@@ -86,6 +86,11 @@ export const appRoutes: Routes = [
         loadComponent: () => import('./ecommerce/carts/carts.component').then(m => m.CartsComponent) 
       },
       { 
+        path: 'orders', 
+        loadComponent: () => import('./ecommerce/orders/orders.component').then(m => m.OrdersComponent),
+        canActivate: [canActivate]
+      },
+      { 
         path: 'admin-orders', 
         loadComponent: () => import('./ecommerce/admin-orders/admin-orders.component').then(m => m.AdminOrdersComponent),
         canActivate: [canActivate]
