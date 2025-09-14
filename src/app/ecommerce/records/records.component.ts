@@ -36,7 +36,6 @@ import { UserService } from 'src/app/services/user.service';
         InputNumberModule
     ],
     templateUrl: './records.component.html',
-    styleUrl: './records.component.css',
     providers: [ConfirmationService]
 })
 export class RecordsComponent implements OnInit {
@@ -229,7 +228,9 @@ export class RecordsComponent implements OnInit {
       this.recordsService.addRecord(this.record).subscribe({
         next: (data) => {
           this.visibleError = false;
+          this.cancelEdition();
           this.form.reset();
+          this.cdr.markForCheck();
           this.getRecords();
         },
         error: (err) => {
@@ -244,6 +245,7 @@ export class RecordsComponent implements OnInit {
           this.visibleError = false;
           this.cancelEdition();
           this.form.reset();
+          this.cdr.markForCheck();
           this.getRecords();
         },
         error: (err) => {

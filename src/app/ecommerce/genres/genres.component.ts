@@ -25,7 +25,6 @@ import { GenresService } from '../services/genres.service';
         ConfirmDialogModule
     ],
     templateUrl: './genres.component.html',
-    styleUrl: './genres.component.css',
     providers: [ConfirmationService],
     changeDetection: ChangeDetectionStrategy.OnPush
 })

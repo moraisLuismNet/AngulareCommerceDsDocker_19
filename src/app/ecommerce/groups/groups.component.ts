@@ -29,7 +29,6 @@ import { GenresService } from '../services/genres.service';
         DropdownModule
     ],
     templateUrl: './groups.component.html',
-    styleUrl: './groups.component.css',
     providers: [ConfirmationService],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -301,7 +300,9 @@ export class GroupsComponent implements OnInit {
 
   // Comparator for the genre select
   compareGenres(genre1: any, genre2: any): boolean {
-    if (!genre1 || !genre2) return false;
+    if (genre1 === null || genre2 === null) {
+        return genre1 === genre2;
+    }
     
     // Handle both object and primitive comparisons
     const id1 = typeof genre1 === 'object' ? genre1.idMusicGenre : genre1;
@@ -338,6 +339,8 @@ export class GroupsComponent implements OnInit {
       message: `Are you sure you want to delete ${group.nameGroup}?`,
       header: 'Confirm Delete',
       icon: 'pi pi-exclamation-triangle',
+      acceptLabel: "Yes",
+      acceptButtonStyleClass: "p-button-danger",
       accept: () => {
         this.deleteGroup(group.idGroup);
       }

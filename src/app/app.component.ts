@@ -10,8 +10,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
         RouterModule,
         NavbarComponent
     ],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.css'
+    templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   title = 'AngulareCommerceDs';

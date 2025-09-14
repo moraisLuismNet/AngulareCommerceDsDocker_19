@@ -31,7 +31,6 @@ import { GenresService } from '../services/genres.service';
         DropdownModule
     ],
     templateUrl: './listgroups.component.html',
-    styleUrl: './listgroups.component.css',
     providers: [ConfirmationService],
     changeDetection: ChangeDetectionStrategy.OnPush
 })

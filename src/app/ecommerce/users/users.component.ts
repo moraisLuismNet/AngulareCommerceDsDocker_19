@@ -26,7 +26,6 @@ import { UsersService } from '../services/users.service';
         DialogModule
     ],
     templateUrl: './users.component.html',
-    styleUrl: './users.component.css',
     providers: [ConfirmationService, MessageService],
     changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -21,7 +21,6 @@ import { IOrder } from '../ecommerce.interface';
         InputTextModule
     ],
     templateUrl: './orders.component.html',
-    styleUrl: './orders.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OrdersComponent implements OnInit {

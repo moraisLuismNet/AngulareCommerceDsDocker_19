@@ -38,7 +38,6 @@ import { AuthGuard } from 'src/app/guards/auth-guard.service';
         DropdownModule
     ],
     templateUrl: './listrecords.component.html',
-    styleUrl: './listrecords.component.css',
     providers: [ConfirmationService]
 })
 export class ListrecordsComponent implements OnInit {

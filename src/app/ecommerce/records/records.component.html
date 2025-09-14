@@ -13,7 +13,7 @@
             id="group"
             style="font-size: 0.9rem"
           >
-            <option value="">Select a Group</option>
+            <option [ngValue]="null" disabled>Select a Group</option>
             @for (group of groups; track group.idGroup) {
             <option [value]="group.idGroup">
               {{ group.nameGroup }}
@@ -132,7 +132,7 @@
           <button
             type="submit"
             class="btn btn-primary"
-            [disabled]="form.invalid || record.stock <= 0"
+            [disabled]="form.invalid || record.stock <= 0 || !record.groupId"
             style="font-size: 0.85rem; padding: 0.25rem 0.75rem"
           >
             {{ record.idRecord === 0 ? "Add" : "Accept" }}

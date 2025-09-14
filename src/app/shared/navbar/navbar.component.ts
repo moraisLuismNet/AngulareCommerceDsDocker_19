@@ -22,7 +22,6 @@ import { CartService } from 'src/app/ecommerce/services/cart.service';
         RippleModule
     ],
     templateUrl: './navbar.component.html',
-    styleUrl: './navbar.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent implements OnInit {
